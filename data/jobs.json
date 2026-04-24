@@ -1,0 +1,42 @@
+[
+  {
+    "id": "job-1",
+    "title": "AI Agent Developer",
+    "company": "TechCorp",
+    "location": "Remote",
+    "required_skills": ["Python", "CrewAI", "LangGraph", "LLM APIs", "Pydantic"],
+    "preferred_skills": ["n8n", "Playwright", "Next.js"],
+    "min_experience_years": 2,
+    "description": "Build AI agents, orchestrate workflows, and integrate LLM APIs in production systems."
+  },
+  {
+    "id": "job-2",
+    "title": "Senior Data Scientist",
+    "company": "DataFlow",
+    "location": "Bangalore",
+    "required_skills": ["Python", "TensorFlow", "PyTorch", "MLOps", "Spark"],
+    "preferred_skills": ["PhD", "Research Publications"],
+    "min_experience_years": 5,
+    "description": "Lead advanced ML research, production modeling, and large-scale data science initiatives."
+  },
+  {
+    "id": "job-3",
+    "title": "Full Stack Developer",
+    "company": "StartupABC",
+    "location": "Hyderabad",
+    "required_skills": ["React", "Node.js", "PostgreSQL", "Docker", "AWS"],
+    "preferred_skills": ["Python", "CI/CD", "Agile"],
+    "min_experience_years": 2,
+    "description": "Build full-stack features with React and Node.js, deploy with cloud-first best practices."
+  },
+  {
+    "id": "job-4",
+    "title": "AI Platform Engineer",
+    "company": "CloudAI",
+    "location": "Remote",
+    "required_skills": ["Python", "FastAPI", "LangChain", "Docker", "K8s"],
+    "preferred_skills": ["CrewAI", "Vector DBs", "Monitoring"],
+    "min_experience_years": 3,
+    "description": "Develop AI platform services, optimize APIs, and operate containerized workloads at scale."
+  }
+]

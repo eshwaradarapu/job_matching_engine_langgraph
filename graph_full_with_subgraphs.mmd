@@ -1,0 +1,46 @@
+flowchart TD
+
+start([START]) --> intake
+intake[Intake] --> scorer[Scorer]
+scorer --> route_start{Any HIGH jobs?}
+
+route_start -->|Yes| process_high[Process HIGH jobs\nset FULL_PIPELINE]
+route_start -->|No| route_medium_gate
+
+process_high --> route_medium_gate{Any MEDIUM jobs?}
+
+route_medium_gate -->|Yes| quick_in
+route_medium_gate -->|No| route_low_gate
+
+subgraph QUICK_PIPELINE_MEDIUM[MEDIUM Subgraph: Quick Pipeline]
+  direction TB
+  quick_in[Extract Requirements]
+  quick_match[Match Skills]
+  quick_summary[Generate Quick Summary]
+  quick_done[[Return enriched MEDIUM jobs]]
+  quick_in --> quick_match --> quick_summary --> quick_done
+end
+
+quick_done --> route_low_gate{Any LOW jobs?}
+
+route_low_gate -->|Yes| low_in
+route_low_gate -->|No| end_main[End]
+
+subgraph LOW_PIPELINE[LOW Subgraph: Skip and Log]
+  direction TB
+  low_in[Analyze Gap]
+  low_log[Write Skip Log]
+  low_done[[Return enriched LOW jobs]]
+  low_in --> low_log --> low_done
+end
+
+low_done --> end_main
+end_main --> finish([END])
+
+classDef main fill:#e8f0ff,stroke:#2f5aa8,stroke-width:1px,color:#0f1f3d;
+classDef med fill:#eaf8ef,stroke:#2f7a42,stroke-width:1px,color:#0f2e1a;
+classDef low fill:#fff4e5,stroke:#a06000,stroke-width:1px,color:#3b2500;
+
+class intake,scorer,process_high,route_start,route_medium_gate,route_low_gate,end_main main;
+class quick_in,quick_match,quick_summary,quick_done med;
+class low_in,low_log,low_done low;

@@ -1,0 +1,21 @@
+{
+  "name": "Ravi Kumar",
+  "title": "Python Developer",
+  "experience_years": 3,
+  "skills": [
+    "Python",
+    "FastAPI",
+    "PostgreSQL",
+    "Docker",
+    "React",
+    "LangChain",
+    "CrewAI",
+    "Git"
+  ],
+  "resume_details": "Built API platforms with FastAPI and PostgreSQL, automated internal workflows, and delivered AI proof-of-concepts using LangChain and CrewAI.",
+  "preferences": {
+    "role_type": "AI/ML Engineer",
+    "location": "Remote or Hyderabad",
+    "min_match_score": 5
+  }
+}
