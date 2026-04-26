@@ -16,6 +16,7 @@ class QuickPipelineState(TypedDict):
     extracted_requirements: list[str]
     highlighted_skills: list[str]
     quick_summary: str
+    
 
 
 def extract_requirements_node(state: QuickPipelineState) -> QuickPipelineState:

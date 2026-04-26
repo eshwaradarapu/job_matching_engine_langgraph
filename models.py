@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Literal
+from typing import List, Literal
 
 from pydantic import BaseModel, Field
 
@@ -47,3 +47,13 @@ class AnalyzedJob(BaseModel):
     quick_pipeline_highlights: list[str] | None = None
     quick_pipeline_summary: str | None = None
     skip_log: str | None = None
+    tailored_resume: dict | None = None
+    cover_letter: str | None = None
+    quality_score: int | None = None
+    decision: Literal["APPROVED", "REJECTED", "REVISION"] | None = None
+
+
+
+class TailoredResume(BaseModel):
+    relevant_skills: List[str]
+    summary: str
